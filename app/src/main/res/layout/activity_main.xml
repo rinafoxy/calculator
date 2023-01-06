@@ -1,18 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:background="@drawable/light"
+    android:columnCount="4"
+    android:rowCount="7"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_rowWeight="1"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginStart="@dimen/margin_end_start"
+        android:layout_marginTop="@dimen/margin_end_start"
+        android:layout_marginEnd="@dimen/margin_end_start"
+        android:gravity="bottom|end"
+        android:padding="@dimen/result_padding"
+        android:text="@string/default_result"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/result_text_size" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line_height"
+        android:layout_columnSpan="4"
+        android:layout_columnWeight="4"
+        android:layout_marginStart="@dimen/margin_end_start"
+        android:layout_marginTop="@dimen/margin_line"
+        android:layout_marginEnd="@dimen/margin_end_start"
+        android:layout_marginBottom="@dimen/margin_line"
+        android:background="@color/dark_cyan" />
+
+    <Button
+        android:id="@+id/buttonClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginStart="@dimen/margin_end_start"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_all_clean"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/text_button_size" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_delete_sign"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_percent"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginEnd="@dimen/margin_end_start"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_divide"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginStart="@dimen/margin_end_start"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_7"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_8"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_9"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonMultiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginEnd="@dimen/margin_end_start"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_multiply"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginStart="@dimen/margin_end_start"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_4"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_6"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginEnd="@dimen/margin_end_start"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_minus"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginStart="@dimen/margin_end_start"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_1"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_2"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_3"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginEnd="@dimen/margin_end_start"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_plus"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonThemeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="0"
+        android:layout_columnWeight="1"
+        android:layout_marginStart="@dimen/margin_end_start"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_theme_switch"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_0"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/button_dot"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonEqual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginEnd="@dimen/margin_end_start"
+        android:backgroundTint="@color/cyan"
+        android:text="@string/button_equal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_button_size"
+        android:textStyle="bold" />
+
+</GridLayout>
